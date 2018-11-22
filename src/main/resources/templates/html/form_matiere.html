@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css"
+	th:href="@{css/ajoutenseignant.css}">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{modmatiere}" method="POST" th:object="${m}">
+		<fieldset>
+			<legend>Ajout matiere :</legend>
+
+			<label for="num_Matiere">Id:</label> <input type="number"
+				th:field="*{id}" placeholder="id" id="id" /><br /> <label
+				for="numeroMatiere">Num_Matiere:</label> <input type="number"
+				th:field="*{numeroMatiere}" placeholder="numeroMatiere"
+				id="num_etudiant" /><br /> <label for="nom">Nom:</label> <input
+				type="text" th:field="*{nom}" placeholder="nom" id="nom" /><br />
+			<label for="coef">Coef:</label> <input type="text" th:field="*{coef}"
+				placeholder="coef" id="coef" /><br /> <label for="dateDebut">date_debut:
+			</label> <input type="text" th:field="*{dateDebut}" placeholder="date_debut"
+				id="date_debut" /><br /> <label for="date_fin">Date_Fin: </label>
+			<input type="text" th:field="*{dateFin}" placeholder="date_fin"
+				id="date_fin" /><br /> <select name="idenseignant">
+				<option th:each="e : ${enseignants}" th:value="${e.id}"
+					th:text="${e.nom}">
+			</select>
+		</fieldset>
+		<input type="submit" value="valider" />
+	</form>
+</body>
+</html>

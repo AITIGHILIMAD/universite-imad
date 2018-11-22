@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{css/enseignant.css}">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr th:each="E : ${etd}">
+			<td th:text=" ${E.id}"></td>
+			<td th:text=" ${E.numeroEtudiant}"></td>
+			<td th:text=" ${E.nom}"></td>
+			<td th:text=" ${E.prenom}"></td>
+			<td th:text=" ${E.dateNaissance}"></td>
+			<td th:text=" ${E.sexe}"></td>
+
+			<td><a th:href="@{fetudiant(id=${E.id})}">Voir</a></td>
+			<td><a th:href="@{supetudiant(id=${E.id})}">Supprimer un
+					Etudiant</a></td>
+			<td><a th:href="@{mod_etudiant(id=${E.id})}">Modifier un
+					etudiant</a></td>
+	</table>
+	<a th:href="@{formulaire_etudiant_ajout}">Ajout d'un client</a>
+
+</body>
+</html>

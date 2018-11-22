@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{css/ajoutenseignant.css}">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{modenseignant}" method="POST" th:object="${E}">
+	<fieldset>  <legend>Ajout client :</legend>
+	
+		<label for="num_client">Id:</label> <input type="number"  th:field="*{id}"
+			placeholder="id" id="id" /><br /> <label for="numeroEnseignant">Num_Client:</label>
+		<input type="number" th:field="*{numeroEnseignant}" placeholder="numeroEnseignant"
+			id="num_client" /><br /> <label for="nom">Nom:</label> <input
+			type="text" th:field="*{nom}" placeholder="nom" id="nom" /><br /> <label
+			for="prenom">Prenom:</label> <input type="text" th:field="*{prenom}"
+			placeholder="prenom" id="prenom" /><br /> <label
+			for="dateNaissance">date_naissance: </label> <input type="text"
+			th:field="*{dateNaissance}" placeholder="dateNaissance"
+			id="date_naissance" /><br /> <label for="tel_fixe">Sexe: </label> <input
+			type="text" th:field="*{sexe}" placeholder="sexe" id="sexe" /><br /> <label
+			for="grade">Grade: </label> <input type="text" th:field="*{grade}"
+			placeholder="grade" id="grade" /><br /> <label for="date_embauche">Date_embauche:
+		</label> <input type="text" th:field="*{dateEmbauche}" placeholder="dateEmbauche"
+			id="dateEmbauche" /><br />
+			</fieldset> <input type="submit" value="valider" />
+	</form>
+</body>
+</html>

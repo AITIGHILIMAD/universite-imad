@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{css/enseignant.css}">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+		<tr th:each="Em : ${M}">
+			<td th:text=" ${Em.id}"></td>
+			<td th:text=" ${Em.numeroMatiere}"></td>
+			<td th:text=" ${Em.nom}"></td>
+			<td th:text=" ${Em.coef}"></td>
+			<td th:text=" ${Em.dateDebut}"></td>
+			<td th:text=" ${Em.dateFin}"></td>
+			<td th:text=" ${Em.enseignant.nom}"></td>
+			<td th:text=" ${Em.enseignant.prenom}"></td>
+			<td><a th:href="@{fmatiere(id=${Em.id})}">Voir</a></td>
+			<td><a th:href="@{supmatiere(id=${Em.id})}" >Supprimer une matiere</a></td>
+			<td><a th:href="@{form_matiere(id=${Em.id})}" >modifier une matiere</a></td>
+
+			
+	</table>
+	<a th:href="@{ajout_formulaire}" >Ajout d'une matiere</a>
+</body>
+</html>

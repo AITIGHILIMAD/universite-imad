@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{css/enseignant.css}">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 th:text="${fetd.numeroEtudiant}" > </h1>
+<h1 th:text="${fetd.nom}" > </h1>
+<h1 th:text="${fetd.prenom}" > </h1>
+<h1 th:text="${fetd.dateNaissance}" > </h1>
+<h1 th:text="${fetd.sexe}" > </h1>
+<h1>Notes </h1>
+<table>
+<tr th:each="n : ${fetd.notes}">
+	<td th:text= "${n.matiere.nom}"></td>
+	<td th:text="${n.note}"></td>
+	<td th:text="${n.matiere.enseignant.nom}"></td>
+</tr>
+</table>
+</body>
+</html>

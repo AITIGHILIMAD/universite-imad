@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{css/ajoutenseignant.css}">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{modetudiant}" method="POST" th:object="${E}">
+	<fieldset>  <legend>Ajout etudiant :</legend>
+	
+		<label for="num_etudiant">Id:</label> <input type="number"  th:field="*{id}"
+			placeholder="id" id="id" /><br /> <label for="numeroEtudiant">Num_Etudiant:</label>
+		<input type="number" th:field="*{numeroEtudiant}" placeholder="numeroEtudiantt"
+			id="num_etudiant" /><br /> <label for="nom">Nom:</label> <input
+			type="text" th:field="*{nom}" placeholder="nom" id="nom" /><br /> <label
+			for="prenom">Prenom:</label> <input type="text" th:field="*{prenom}"
+			placeholder="prenom" id="prenom" /><br /> <label
+			for="dateNaissance">date_naissance: </label> <input type="text"
+			th:field="*{dateNaissance}" placeholder="dateNaissance"
+			id="date_naissance" /><br /> <label for="tel_fixe">Sexe: </label> <input
+			type="text" th:field="*{sexe}" placeholder="sexe" id="sexe" /><br />
+			
+			</fieldset> <input type="submit" value="valider" />
+	</form>
+</body>
+</html>
