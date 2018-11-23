@@ -20,20 +20,20 @@ public class MatiereBusinessImpl implements IMatiereBusiness {
 
 	@Override
 	public List<Matiere> getMatiere() {
-		List<Matiere> listematiere = imatiererepository.findAll();
-		return listematiere;
+		return imatiererepository.findAll();
+
 	}
 
 	@Override
 	public Matiere fmatiere(Integer id) {
-		Matiere m = imatiererepository.getOne(id);
-		return m;
+		return imatiererepository.getOne(id);
+
 	}
 
 	@Override
 	public Matiere ajoutmatiere(Matiere matiere) {
-		Matiere m = imatiererepository.save(matiere);
-		return m;
+		return imatiererepository.save(matiere);
+
 	}
 
 	@Override
@@ -44,20 +44,20 @@ public class MatiereBusinessImpl implements IMatiereBusiness {
 
 	@Override
 	public List<Enseignant> findallenseignant() {
-		List<Enseignant> E = ienseignantbusiness.getEnseignant();
-		return E;
+		return ienseignantbusiness.getEnseignant();
+
 	}
 
 	@Override
 	public Enseignant findenseignantbyid(Integer id) {
-		Enseignant m = ienseignantbusiness.findEnseigant(id);
-		return m;
+		return ienseignantbusiness.findEnseigant(id);
+
 	}
 
 	@Override
 	public Matiere modmatiere(Matiere m) {
-		Matiere matiere = imatiererepository.save(m);
-		return matiere;
+		return imatiererepository.save(m);
+
 	}
 
 }

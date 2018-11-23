@@ -23,8 +23,8 @@ public class MatiereControllerImpl implements IMatiereController {
 	@Override
 	@RequestMapping("/matiere")
 	public String getMatiere(Model model) {
-		List<Matiere> M = imatierebusiness.getMatiere();
-		model.addAttribute("M", M);
+		List<Matiere> m = imatierebusiness.getMatiere();
+		model.addAttribute("M", m);
 		return "html/matiere";
 	}
 

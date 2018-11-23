@@ -17,8 +17,8 @@ public class NoteBusinessImpl implements INoteBusiness {
 
 	@Override
 	public List<Note> getnote() {
-		List<Note> liste = inoterepository.findAll();
-		return liste;
+		return inoterepository.findAll();
+
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class NoteBusinessImpl implements INoteBusiness {
 		NotePK pk = new NotePK();
 		pk.setIdEtudiant(idEtudiant);
 		pk.setIdMatiere(idMatiere);
-		Note n = inoterepository.getOne(pk);
-		return n;
+		return inoterepository.getOne(pk);
+
 	}
 }
