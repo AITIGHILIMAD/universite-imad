@@ -19,6 +19,7 @@ import fr.imad.universite.matiere.domaine.Matiere;
 public class MatiereControllerImpl implements IMatiereController {
 	@Autowired
 	private IMatiereBusiness imatierebusiness;
+	private final static String REDIRECT_ENSEIGNANTS = "redirect:/enseignants";
 
 	@Override
 	@RequestMapping("/matiere")
@@ -52,14 +53,14 @@ public class MatiereControllerImpl implements IMatiereController {
 		Enseignant enseignant = imatierebusiness.findenseignantbyid(idenseignant);
 		matiere.setEnseignant(enseignant);
 		imatierebusiness.ajoutmatiere(matiere);
-		return "redirect:/matiere";
+		return REDIRECT_ENSEIGNANTS;
 	}
 
 	@Override
 	@RequestMapping("/supmatiere")
 	public String supmatiere(Model model, Integer id) {
 		imatierebusiness.supmatiere(id);
-		return "redirect:/matiere";
+		return REDIRECT_ENSEIGNANTS;
 	}
 
 	@Override
@@ -78,7 +79,7 @@ public class MatiereControllerImpl implements IMatiereController {
 		Enseignant enseignant = imatierebusiness.findenseignantbyid(idenseignant);
 		matiere.setEnseignant(enseignant);
 		imatierebusiness.modmatiere(matiere);
-		return "redirect:/matiere";
+		return REDIRECT_ENSEIGNANTS;
 	}
 
 }

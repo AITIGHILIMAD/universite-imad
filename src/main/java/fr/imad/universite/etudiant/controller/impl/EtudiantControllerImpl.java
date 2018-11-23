@@ -18,6 +18,7 @@ import fr.imad.universite.etudiant.domaine.Etudiant;
 public class EtudiantControllerImpl implements IEtudiantController {
 	@Autowired
 	private IEtudiantBusiness ietudiantbusiness;
+	private final static String REDIRECT_ENSEIGNANTS = "redirect:/enseignants";
 
 	@Override
 	@RequestMapping("/etudiant")
@@ -48,14 +49,14 @@ public class EtudiantControllerImpl implements IEtudiantController {
 	@PostMapping("/ajout_etudiant")
 	public String ajoutenseignant(Model model, Etudiant etudiant) {
 		ietudiantbusiness.savetudiant(etudiant);
-		return "redirect:/etudiant";
+		return REDIRECT_ENSEIGNANTS;
 	}
 
 	@Override
 	@RequestMapping("/supetudiant")
 	public String supetudiant(Model model, Integer id) {
 		ietudiantbusiness.supetudiant(id);
-		return "redirect:/etudiant";
+		return REDIRECT_ENSEIGNANTS;
 	}
 
 	@Override
@@ -71,7 +72,7 @@ public class EtudiantControllerImpl implements IEtudiantController {
 	@PostMapping("/modetudiant")
 	public String modifieretudiant(Model model, @ModelAttribute Etudiant etudiant) {
 		ietudiantbusiness.modifieretudiant(etudiant);
-		return "redirect:/etudiant";
+		return REDIRECT_ENSEIGNANTS;
 	}
 
 }

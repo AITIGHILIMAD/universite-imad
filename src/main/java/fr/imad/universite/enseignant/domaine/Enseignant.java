@@ -45,10 +45,6 @@ public class Enseignant {
 	@Column(name = "dateEmbauche")
 	private String dateEmbauche;
 
-	public Enseignant() {
-
-	}
-
 	public Integer getId() {
 		return id;
 	}

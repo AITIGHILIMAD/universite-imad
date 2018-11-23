@@ -19,6 +19,8 @@ public class EnseignantControllerImpl implements IEnseignantController {
 	@Autowired
 	private IEnseignantBusiness ienseignantbusiness;
 
+	private final static String REDIRECT_ENSEIGNANTS = "redirect:/enseignants";
+
 	@Override
 	@RequestMapping("/enseignants")
 	public String getEnseignants(Model model) {
@@ -48,14 +50,14 @@ public class EnseignantControllerImpl implements IEnseignantController {
 	@PostMapping("/ajout_enseignant")
 	public String ajoutenseignant(Model model, @ModelAttribute Enseignant enseignant) {
 		ienseignantbusiness.savenseignant(enseignant);
-		return "redirect:/enseignants";
+		return REDIRECT_ENSEIGNANTS;
 	}
 
 	@Override
 	@RequestMapping("/supenseignant")
 	public String delateenseignant(Model model, @RequestParam Integer id) {
 		ienseignantbusiness.delateenseignant(id);
-		return "redirect:/enseignants";
+		return REDIRECT_ENSEIGNANTS;
 	}
 
 	@Override
@@ -70,7 +72,7 @@ public class EnseignantControllerImpl implements IEnseignantController {
 	@PostMapping("/modenseignant")
 	public String modifierenseignant(Model model, @ModelAttribute Enseignant enseignant) {
 		ienseignantbusiness.modifierenseignant(enseignant);
-		return "redirect:/enseignants";
+		return REDIRECT_ENSEIGNANTS;
 	}
 
 }
