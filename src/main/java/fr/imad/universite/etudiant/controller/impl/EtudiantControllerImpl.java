@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import fr.imad.universite.business.IEtudiantBusiness;
+import fr.imad.universite.etudiant.business.IEtudiantBusiness;
 import fr.imad.universite.etudiant.controller.IEtudiantController;
 import fr.imad.universite.etudiant.domaine.Etudiant;
 

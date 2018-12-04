@@ -1,4 +1,4 @@
-package fr.imad.universite.business;
+package fr.imad.universite.etudiant.business;
 
 import java.util.List;
 

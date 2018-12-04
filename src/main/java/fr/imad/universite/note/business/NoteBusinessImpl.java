@@ -1,14 +1,13 @@
-package fr.imad.universite.business.impl;
+package fr.imad.universite.note.business;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import fr.imad.universite.note.business.INoteBusiness;
 import fr.imad.universite.note.domaine.Note;
-import fr.imad.universite.notepk.domaine.NotePK;
-import fr.imad.universite.repository.INoteRepository;
+import fr.imad.universite.note.domaine.NotePK;
+import fr.imad.universite.note.repository.INoteRepository;
 
 @Service
 public class NoteBusinessImpl implements INoteBusiness {

@@ -1,4 +1,4 @@
-package fr.imad.universite.notepk.domaine;
+package fr.imad.universite.note.domaine;
 
 import java.io.Serializable;
 

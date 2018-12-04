@@ -1,11 +1,11 @@
-package fr.imad.universite.business.impl;
+package fr.imad.universite.etudiant.business.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import fr.imad.universite.business.IEtudiantBusiness;
+import fr.imad.universite.etudiant.business.IEtudiantBusiness;
 import fr.imad.universite.etudiant.domaine.Etudiant;
 import fr.imad.universite.etudiant.repository.IEtudiantRepository;
 

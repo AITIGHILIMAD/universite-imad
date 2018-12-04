@@ -9,7 +9,6 @@ import javax.persistence.Table;
 
 import fr.imad.universite.etudiant.domaine.Etudiant;
 import fr.imad.universite.matiere.domaine.Matiere;
-import fr.imad.universite.notepk.domaine.NotePK;
 
 @Entity
 @Table(name = "T_Note")
